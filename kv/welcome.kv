@@ -1,0 +1,30 @@
+<welcome>:
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+    Image:
+        source: "assets/image/Hello-rafiki.png"
+        size_hint: .9, .9
+        pos_hint: {"center_x": 0.5,"center_y": 0.65}
+    MDLabel:
+        text: "Welcome to my Kivy Apps"
+        font_name: "MPoppins"
+        font_size: "17sp"
+        halign: "center"
+        pos_hint: {"center_x": 0.5,"center_y": 0.35}
+        color: rgba(127, 127, 127, 255)
+    MDFillRoundFlatButton:
+        text: "LOGIN"
+        font_name: "BPoppins"
+        size_hint: .5, .065
+        pos_hint: {"center_x": 0.5,"center_y": 0.23}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "login"
+    MDRoundFlatButton:
+        text: "SIGNUP"
+        font_name: "BPoppins"
+        size_hint: .5, .065
+        pos_hint: {"center_x": 0.5,"center_y": 0.14}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "signup"
